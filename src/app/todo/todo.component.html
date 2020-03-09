@@ -1,0 +1,13 @@
+<section class="todo-list">
+    <div class="todo-input">
+        <input type="text" [(ngModel)]="currentValue" (keyup)="handleEnter($event)">
+        <button (click)="addTask()">Add</button>
+    </div>
+    <ul *ngFor="let task of tasks">
+        <li class="task" [ngClass]="{'completed':task.completed}">
+            {{task.description}}
+            <button class="complete-task" (click)="completeTask(task.id)">Complete task</button>
+            <button class="delete-task" (click)="deleteTask(task.id)">Delete task</button>
+        </li>
+    </ul>
+</section>
