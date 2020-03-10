@@ -4,7 +4,7 @@
         <button (click)="addTask()">Add</button>
     </div>
     <ul *ngFor="let task of tasks">
-        <li class="task" [ngClass]="{'completed':task.completed}">
+        <li class="task" [ngClass]="{'completed':task.completed}" appCharcolor>
             {{task.description}}
             <button class="complete-task" (click)="completeTask(task.id)">Complete task</button>
             <button class="delete-task" (click)="deleteTask(task.id)">Delete task</button>
