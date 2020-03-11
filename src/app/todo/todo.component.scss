@@ -1,3 +1,40 @@
-.completed {
-    background-color: grey;
+.body {
+    box-sizing: border-box;
+    li, ul, ol {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    display: flex;
+    justify-content: center;
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        padding: 10px;
+        background-color: #ff0404c7;
+        .input {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            button, input {
+                padding: 10px;
+            }
+            input {
+                width: 80%;
+            }
+        }
+        .lista {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            .item {
+                display: flex;
+                width: 90%;
+                justify-content: space-between;
+                background-color: #ffffff30;
+                padding: 10px;
+            }
+        }
+    }
 }

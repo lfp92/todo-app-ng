@@ -1,13 +1,17 @@
-<section class="todo-list">
-    <div class="todo-input">
-        <input type="text" [(ngModel)]="currentValue" (keyup)="handleEnter($event)">
-        <button (click)="addTask()">Add</button>
-    </div>
-    <ul *ngFor="let task of tasks">
-        <li class="task" [ngClass]="{'completed':task.completed}" appCharcolor>
-            {{task.description}}
-            <button class="complete-task" (click)="completeTask(task.id)">Complete task</button>
-            <button class="delete-task" (click)="deleteTask(task.id)">Delete task</button>
-        </li>
-    </ul>
-</section>
+<div class="body">
+    <section class="card">
+        <div class="input">
+            <input type="text" [(ngModel)]="currentValue" (keyup)="handleEnter($event)">
+            <button class="button-task" (click)="addTask()">Add</button>
+        </div>
+        <ul *ngFor="let task of tasks" class="lista">
+            <li [ngClass]="{'completed':task.completed}" class="item">
+                {{task.description}}
+                <div class="comandos">
+                    <button class="complete-task" (click)="completeTask(task.id)">Complete</button>
+                    <button class="delete-task" (click)="deleteTask(task.id)">Delete task</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+</div>
